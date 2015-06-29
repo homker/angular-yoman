@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "animate";
 // endbower
 
 .browsehappy {
@@ -72,6 +73,54 @@ body {
   cursor: move;
   padding: 5px 10px;
 }
+
+.mask{
+  display:none;
+  background:#000;
+  filter:alpha(opacity=10);
+  opacity:.1;
+  left:0px;
+  top:0px;
+  position:fixed;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  z-index:10000;
+}
+
+.mask-ie6{
+  display:none;
+  background:#000;
+  filter:alpha(opacity=10);
+  opacity:.1;
+  left:0px;
+  top:0px;
+  position:fixed;
+  _position:absolute;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  z-index:10000;
+}
+
+.mask-ie6-div{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:10;
+  background-color:#000;
+}
+.mask-ie6-iframe{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

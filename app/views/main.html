@@ -5,15 +5,15 @@
       <div class="input-group">
         <input class="form-control" type="text" ng-model="todo" placeholder="输入todo"/>
         <span class="input-group-btn">
-          <input class="btn btn-primary" value="添加" type="submit" />
+          <input class="btn btn-primary add" value="添加" type="submit" />
         </span>
       </div>
     </div>
   </form>
   <p></p>
   <div ui-sortable ng-model="todos">
-  <p ng-repeat="todo in todos track by $index" class="input-group move-able" >
-      <input class="form-control" type="text" ng-model="todo"/>
+  <p ng-repeat="todo in todos track by $index" class="input-group move-able todo" >
+      <span class="form-control" type="text" ng-model="todo">{{todo}}</span>
       <span class="input-group-btn">
         <button class="btn btn-danger" ng-click="removeTodo($index)" aria-lable="Remove">X</button>
       </span>

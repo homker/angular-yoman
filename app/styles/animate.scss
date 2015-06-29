@@ -1,0 +1,31 @@
+@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/vendor-prefixes';
+@import 'compass/css3/opacity';
+
+
+.todo.ng-enter,
+.todo.ng-leave,
+.todo.ng-move {
+  @include transition(0.5s linear all)
+}
+
+.todo.ng-enter,
+.todo.ng-move {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.todo.ng-move.ng-move-active,
+.todo.ng-enter.ng-enter-active {
+  @include opacity(1);
+}
+
+.todo.ng-leave {
+  @include opacity(1);
+  overflow: hidden;
+}
+
+.todo.ng-leave.ng-leave-active {
+  @include opacity(0);
+}
+
